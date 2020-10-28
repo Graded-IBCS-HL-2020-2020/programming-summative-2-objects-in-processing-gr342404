@@ -17,6 +17,9 @@ class Ball {
         diameter = s.random(50, 150); // random diameter between 50 and 150
         x = s.random(diameter / 2, s.width - diameter / 2);
         y = s.random(diameter / 2, s.height - diameter / 2);
+        col = s.randomColor(false);
+        speedX = s.random(5,10);
+        speedY = s.random(5,10);
 
         /*
          * SUMMATIVE REQUIRED use the randomColor() method in the sketch to set default
@@ -31,13 +34,26 @@ class Ball {
 
     /** This constructor lets you specify all of the ball instance variables */
     public Ball(Sketch s, float X, float Y, float ballDiam, int ballColor, float sx, float sy) {
+       
         /* SUMMATIVE REQUIRED Fill out this constructor */
+        s = sketch;
+        x = X;
+        y = Y;
+        diameter = ballDiam;
+        col = ballColor;
+        speedX = sx;
+        speedY = sy;
     }
 
     /*
      * SUMMATIVE REQUIRED Add a method called `getRadius()` that returns a float
      * representing the radius of the ball
      */
+
+     public float getRadius(){
+
+      return diameter / 2;
+     }
 
     /*
      * SUMMATIVE OPTIONAL Add a method called `stop()` that sets the ball speed to
