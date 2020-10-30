@@ -19,15 +19,7 @@ class Bubble {
      * take that into account!
      * 
 
-       public Bubble(Sketch sketch) {
-        s = sketch;
-        diameter = s.random(25, 100); 
-        x = s.random(diameter / 2, s.width - diameter / 2);
-        y = s.random(diameter / 2, s.height - diameter / 2);
-        col = s.color(255, 150);
-        speedX = s.random(-7,-10);
-        speedY = s.random(-7,-10);
-        }
+        
 
 
 
@@ -35,13 +27,7 @@ class Bubble {
         public Bubble(Sketch s, float X, float Y, float bubblelDiam, int bubbleColor, float sx, float sy) {
        
         /* SUMMATIVE REQUIRED Fill out this constructor */
-        s = sketch;
-        x = X;
-        y = Y;
-        diameter = bubbleDiam;
-        col = bubbleColor;
-        speedX = sx;
-        speedY = sy;
+       
     }
 
 
