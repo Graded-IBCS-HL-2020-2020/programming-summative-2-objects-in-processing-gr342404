@@ -33,7 +33,7 @@ class Ball {
     }
 
     /** This constructor lets you specify all of the ball instance variables */
-    public Ball(Sketch s, float X, float Y, float ballDiam, int ballColor, float sx, float sy) {
+    public Ball(Sketch sketch, float X, float Y, float ballDiam, int ballColor, float sx, float sy) {
        
         /* SUMMATIVE REQUIRED Fill out this constructor */
         s = sketch;
