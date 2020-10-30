@@ -16,9 +16,9 @@ public class Sketch extends PApplet {
       Ball b2;
       Ball b3;
       Ball b4;
-      //Bubble bu1;
-      //Bubble bu2;
-      //Bubble bu3;
+      Bubble bu1;
+      Bubble bu2;
+      Bubble bu3;
     
 
     public void settings() {
@@ -39,9 +39,9 @@ public class Sketch extends PApplet {
         b3 = new Ball(this);
         b4 = new Ball(this);
         
-        //bu1 = new Buuble(this);
-        //bu2 = new Buuble(this);
-        //bu3 = new Buuble(this);
+        bu1 = new Bubble(this);
+        bu2 = new Bubble(this);
+        bu3 = new Bubble(this);
         
         
     }
@@ -57,13 +57,15 @@ public class Sketch extends PApplet {
         b3.drawBall();
         b3.moveBall();
         b4.drawBall();
-        b4.moveBall();
-        //bu1.drawBubble();
-        //bu1.moveBubble();
-        //bu2.drawBubble();
-        //bu2.moveBubble();
-        //bu3.drawBubble();
-        //bu3.moveBubble();
+        b4.moveBall();  
+
+
+        bu1.drawBubble();
+        bu1.moveBubble();
+        bu2.drawBubble();
+        bu2.moveBubble();
+        bu3.drawBubble();
+        bu3.moveBubble();
         
         
     }

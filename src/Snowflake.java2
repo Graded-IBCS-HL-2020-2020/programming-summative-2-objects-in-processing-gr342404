@@ -9,6 +9,20 @@ class Snowflake {
      * constructors.
      */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /** Draws the flake. */
     public void drawSnowflake() {
         s.stroke(col);

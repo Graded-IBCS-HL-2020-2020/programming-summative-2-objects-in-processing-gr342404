@@ -12,21 +12,39 @@ class Bubble {
     private float speedY;
     private float speedX;
 
-    /**
-     * SUMMATIVE REQUIRED Add two constructors for the Bubble class, one that is
+    
+     /* SUMMATIVE REQUIRED Add two constructors for the Bubble class, one that is
      * mostly default and one that allows custom values for whichever you want to be
      * able to change. Remember that bubbles should RISE - when setting default values,
      * take that into account!
-     * 
+     */
+
+     public Bubble(Sketch sketch) {
+        s = sketch;
+        diameter = s.random(40, 60); 
+        x = s.random(diameter / 2, s.width - diameter / 2);
+        y = s.random(diameter / 2, s.height - diameter / 2);
+        col = s.color(255, 150);
+        speedX = s.random(-7,-14);
+        speedY = s.random(-7,-14);
+     }
 
         
 
 
-
-
-        public Bubble(Sketch s, float X, float Y, float bubblelDiam, int bubbleColor, float sx, float sy) {
-       
+      
         /* SUMMATIVE REQUIRED Fill out this constructor */
+
+        public Bubble(Sketch bubSketch, float bubX, float bubY, float bubbleDiam, int bubbleColor, float bubsx, float bubsy, int borderBubble) {
+        s = bubSketch;
+        x = bubX;
+        y = bubY;
+        diameter = bubbleDiam;
+        col = bubbleColor;
+        speedX = bubsx;
+        speedY = bubsy;
+        borderColor= borderBubble;
+        
        
     }
 
@@ -34,7 +52,7 @@ class Bubble {
 
 
 
-     * You can use `s.color(255, 150)` to create a transluscent 
+     /* You can use `s.color(255, 150)` to create a transluscent 
      * white color if you wish
      * 
      * SUMMATIVE OPTIONAL Make it so that some of your constructors (including
@@ -53,18 +71,10 @@ class Bubble {
      * SUMMATIVE REQUIRED Add a method called `getRadius()` that returns a float
      * representing the radius of the bubble
      */
-
-
      public float getRadius(){
 
       return diameter / 2;
       }
-
-
-
-
-
-
 
 
 
