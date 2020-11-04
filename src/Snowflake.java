@@ -1,7 +1,7 @@
 /* YOU SHOULD COMPLETE AND UNDERSTAND THE Ball.java and Bubble.java parts first! */
 /* DON'T FORGET TO RENAME THE FILE TO Snowflake.java WHEN READY TO TEST! */
 
-class Snowflake {
+  class Snowflake {
 
     private Sketch s;
     private float diameter;
@@ -13,7 +13,7 @@ class Snowflake {
 
     public Snowflake (Sketch sketch){
       s = sketch;
-      diamter = s.random(40,50);
+      diameter = s.random(40,50);
       x = s.random(diameter / 2, s.width - diameter / 2);
       y = s.random(diameter / 2, s.height - diameter / 2);
       col = s.color(255, 150);
@@ -22,9 +22,9 @@ class Snowflake {
     }
 
     public float getRadius(){
-      retunr diamter/2
+      return diameter/2;
     }
-}
+
       
       
        /*
@@ -50,7 +50,7 @@ class Snowflake {
 
 
     /** Draws the flake. */
-    public void drawSnowflake() {
+      public void drawSnowflake() {
         s.stroke(col);
         s.line(x - getRadius() / 2, y - getRadius() / 2, x + getRadius() / 2, y + getRadius() / 2);
         s.line(x - getRadius() / 2, y + getRadius() / 2, x + getRadius() / 2, y - getRadius() / 2);
@@ -59,7 +59,7 @@ class Snowflake {
     }
 
     /** Moves the flake */
-    public void moveSnowflake() {
+       public void moveSnowflake() {
         if (x > (s.width - getRadius()) || x < getRadius()) {
             speedX = -speedX;
         }
@@ -73,5 +73,7 @@ class Snowflake {
         y += speedY;
 
     }
+
+    
 }
 

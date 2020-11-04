@@ -7,6 +7,7 @@ class Ball {
     private int col;
     private float speedY;
     private float speedX;
+    private int borderColor; 
 
     /**
      * The default constructor generates random values for most of the instance
@@ -21,6 +22,7 @@ class Ball {
         speedX = s.random(5,10);
         speedY = s.random(5,10);
 
+
         /*
          * SUMMATIVE REQUIRED use the randomColor() method in the sketch to set default
          * balls to a solid random color
@@ -33,7 +35,7 @@ class Ball {
     }
 
     /** This constructor lets you specify all of the ball instance variables */
-    public Ball(Sketch sketch, float X, float Y, float ballDiam, int ballColor, float sx, float sy) {
+    public Ball(Sketch sketch, float X, float Y, float ballDiam, int ballColor, float sx, float sy, int borderBall) {
        
         /* SUMMATIVE REQUIRED Fill out this constructor */
         s = sketch;
@@ -43,6 +45,7 @@ class Ball {
         col = ballColor;
         speedX = sx;
         speedY = sy;
+        borderColor = borderBall;
     }
 
     /*
@@ -63,6 +66,17 @@ class Ball {
      * If you create the methods, you'll need to think of a way to test them...
      */
 
+     public void stop(){
+       speedX = 0;
+       speedY = 0;
+
+     }
+
+     public void start(){
+      speedX = s.random(5,10);
+      speedY = s.random(5,10);
+     }
+
     /** Draws the ball. */
     public void drawBall() {
         /*
@@ -71,7 +85,7 @@ class Ball {
          * the border color to make it show up. You will need to make other changes too.
          */
 
-        s.stroke(col);
+        s.stroke(borderColor);
         s.fill(col);
         s.ellipse(x, y, diameter, diameter);
     }

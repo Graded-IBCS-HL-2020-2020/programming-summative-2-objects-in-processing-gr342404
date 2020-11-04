@@ -22,9 +22,9 @@ public class Sketch extends PApplet {
       Bubble bu3;
 
       Snowflake sn1;
-      //Snowflake sn2;
-      //Snowflake sn3;
-      //Snowflake sn4;
+      Snowflake sn2;
+      Snowflake sn3;
+      Snowflake sn4;
 
     
 
@@ -51,9 +51,9 @@ public class Sketch extends PApplet {
         bu3 = new Bubble(this);
 
         sn1= new Snowflake(this);
-        //sn2= new Snowflake(this);
-        //sn3= new Snowflake(this);
-        //sn4= new Snowflake(this);
+        sn2= new Snowflake(this);
+        sn3= new Snowflake(this);
+        sn4= new Snowflake(this);
         
         
     }
@@ -81,12 +81,12 @@ public class Sketch extends PApplet {
 
         sn1.drawSnowflake();
         sn1.moveSnowflake();
-        //sn2.drawSnowflake();
-        //sn2.moveSnowflake();
-        //sn3.drawSnowflake();
-        //sn3.moveSnowflake();
-        //sn4.drawSnowflake();
-        //sn4.moveSnowflake();
+        sn2.drawSnowflake();
+        sn2.moveSnowflake();
+        sn3.drawSnowflake();
+        sn3.moveSnowflake();
+        sn4.drawSnowflake();
+        sn4.moveSnowflake();
         
         
     }
