@@ -25,8 +25,8 @@ class Bubble {
         x = s.random(diameter / 2, s.width - diameter / 2);
         y = s.random(diameter / 2, s.height - diameter / 2);
         col = s.color(255, 150);
-        speedX = s.random(-7,-14);
-        speedY = s.random(-7,-14);
+        speedX = s.random(-4,-8);
+        speedY = s.random(-4,-8);
      }
 
         

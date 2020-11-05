@@ -110,6 +110,17 @@ public class Sketch extends PApplet {
      * SUMMATIVE OPTIONAL Add a void method called mousePressed() that stops some or
      * all of the balls from moving when you click the mouse. (it will run
      * automatically when you click if the name is correct)
+
+     public void mouseClicked(){
+       if (value == 0) {
+         value = 255;
+         } else {
+        value = 0; 
+        }
+
+       
+
+     }
      * 
      * EXTRA CHALLENGE - can you make it so that only the ball you actually CLICKED
      * stops? (this is a major challenge - you can use the variables mouseX and
