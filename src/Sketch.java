@@ -4,130 +4,104 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
-    /*
-     * SUMMATIVE REQUIRED Declare at least four balls, four bubbles, and four
-     * snowflakes as instance variables. I have made the first ball for you.
-     * 
-     * SUMMATIVE OPTIONAL Use *arrays* to store the elements, rather than individual
-     * variables.
-     */
+  /*
+   * SUMMATIVE REQUIRED Declare at least four balls, four bubbles, and four
+   * snowflakes as instance variables. I have made the first ball for you.
+   * 
+   * SUMMATIVE OPTIONAL Use *arrays* to store the elements, rather than individual
+   * variables.
+   */
 
-      Ball b1;
-      Ball b2;
-      Ball b3;
-      Ball b4; 
+  public void settings() {
+    size(500, 500);
+  }
 
-      Bubble bu1;
-      Bubble bu2;
-      Bubble bu3;
-
-      Snowflake sn1;
-      Snowflake sn2;
-      Snowflake sn3;
-      Snowflake sn4;
-
-    
-
-    public void settings() {
-        size(500, 500);
-    }
-
-    /*
-     * SUMMATIVE REQUIRED Initialize the balls, bubbles, and snowflakes using your
-     * constructors inside of setup(). You must use a non-default-constructor at
-     * least once and a default constructor at least once for each type.
-     * 
-     * I have done the first ball for you.
-     */
-    public void setup() {
+  /*
+   * SUMMATIVE REQUIRED Initialize the balls, bubbles, and snowflakes using your
+   * constructors inside of setup(). You must use a non-default-constructor at
+   * least once and a default constructor at least once for each type.
+   * 
+   * I have done the first ball for you.
+   */
+  public void setup() {
         frameRate(30);
-        b1 = new Ball(this);
-        b2 = new Ball(this);
-        b3 = new Ball(this);
-        b4 = new Ball(this);
-        
-        bu1 = new Bubble(this);
-        bu2 = new Bubble(this);
-        bu3 = new Bubble(this);
+        Ball [] balls  = {new Ball(this), new Ball(this,300, 450, 75, color (0,255, 232), 3, 3, 0 ), new Ball(this), new Ball(this)};
 
-        sn1= new Snowflake(this);
-        sn2= new Snowflake(this);
-        sn3= new Snowflake(this);
-        sn4= new Snowflake(this);
+        
+        Buuble [] buubles = {new Bubble(this),
+        new Bubble(this, 250, 250, 40, color (255, 150), -6, -6, 0), new Bubble(this), new bubble (this)};
+
+        Snowflake [] snowflakes = {new Snowflake(this),
+        new Snowflake(this, 100, 350, 30, color (255,150), 2, 3), new Snowflake (this), Snowflake (this)};
+        
         
         
     }
 
-    public void draw() {
-        background(100);
+  public void draw() {
+    background(100);
 
-        /* SUMMATIVE REQUIRED Draw and move all balls, snowflakes, and bubbles */
-        b1.drawBall();
-        b1.moveBall();
-        b2.drawBall();
-        b2.moveBall();
-        b3.drawBall();
-        b3.moveBall();
-        b4.drawBall();
-        b4.moveBall();  
+    /* SUMMATIVE REQUIRED Draw and move all balls, snowflakes, and bubbles */
+    balls[0].drawBall();
+    balls[0].moveBall();
+    balls[1].drawBall();
+    balls[1].moveBall();
+    balls[2].drawBall();
+    balls[2].moveBall();
+    balls[3].drawBall();
+    balls[3].moveBall();
 
+    buubles[0].drawBubble();
+    buubles[0].moveBubble();
+    buubles[1].drawBubble();
+    buubles[1].moveBubble();
+    buubles[2].drawBubble();
+    buubles[2].moveBubble();
 
-        bu1.drawBubble();
-        bu1.moveBubble();
-        bu2.drawBubble();
-        bu2.moveBubble();
-        bu3.drawBubble();
-        bu3.moveBubble();
+    snowflakes[0].drawSnowflake();
+    snowflakes[0].moveSnowflake();
+    snowflakes[1].drawSnowflake();
+    snowflakes[1].moveSnowflake();
+    snowflakes[2].drawSnowflake();
+    snowflakes[2].moveSnowflake();
+    snowflakes[3].drawSnowflake();
+    snowflakes[3].moveSnowflake();
 
-        sn1.drawSnowflake();
-        sn1.moveSnowflake();
-        sn2.drawSnowflake();
-        sn2.moveSnowflake();
-        sn3.drawSnowflake();
-        sn3.moveSnowflake();
-        sn4.drawSnowflake();
-        sn4.moveSnowflake();
-        
-        
+  }
+
+  /**
+   * Convenience method to return a random color
+   * 
+   * @param transluscent if true, make the color transluscent, otherwise solid
+   */
+  public int randomColor(boolean transluscent) {
+    int alpha;
+    if (transluscent) {
+      alpha = 125;
+    } else {
+      alpha = 255;
     }
+    return color(random(0, 255), random(0, 255), random(0, 255), alpha);
+  }
 
-    /**
-     * Convenience method to return a random color
-     * 
-     * @param transluscent if true, make the color transluscent, otherwise solid
-     */
-    public int randomColor(boolean transluscent) {
-        int alpha;
-        if (transluscent) {
-            alpha = 125;
-        } else {
-            alpha = 255;
-        }
-        return color(random(0, 255), random(0, 255), random(0, 255), alpha);
-    }
+  /*
+   * SUMMATIVE OPTIONAL Add a void method called mousePressed() that stops some or
+   * all of the balls from moving when you click the mouse. (it will run
+   * automatically when you click if the name is correct)
+   * 
+   * public void mouseClicked(){ if (value == 0) { value = 255; } else { value =
+   * 0; }
+   * 
+   * 
+   * 
+   * }
+   * 
+   * EXTRA CHALLENGE - can you make it so that only the ball you actually CLICKED
+   * stops? (this is a major challenge - you can use the variables mouseX and
+   * mouseY to see where the mouse was clicked.)
+   */
 
-    /*
-     * SUMMATIVE OPTIONAL Add a void method called mousePressed() that stops some or
-     * all of the balls from moving when you click the mouse. (it will run
-     * automatically when you click if the name is correct)
-
-     public void mouseClicked(){
-       if (value == 0) {
-         value = 255;
-         } else {
-        value = 0; 
-        }
-
-       
-
-     }
-     * 
-     * EXTRA CHALLENGE - can you make it so that only the ball you actually CLICKED
-     * stops? (this is a major challenge - you can use the variables mouseX and
-     * mouseY to see where the mouse was clicked.)
-     */
-
-    public static void main(String[] args) {
-        PApplet.main("Sketch");
-    }
+  public static void main(String[] args) {
+    PApplet.main("Sketch");
+  }
 }

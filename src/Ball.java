@@ -76,6 +76,7 @@ class Ball {
       speedX = s.random(3,8);
       speedY = s.random(3,8);
      }
+     
 
     /** Draws the ball. */
     public void drawBall() {
