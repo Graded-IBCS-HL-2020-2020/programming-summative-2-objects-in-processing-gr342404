@@ -8,6 +8,7 @@ class Ball {
     private float speedY;
     private float speedX;
     private int borderColor; 
+    
 
     /**
      * The default constructor generates random values for most of the instance
@@ -46,6 +47,7 @@ class Ball {
         speedX = sx;
         speedY = sy;
         borderColor = borderBall;
+        
     }
 
     /*
