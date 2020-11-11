@@ -20,8 +20,8 @@ class Ball {
         x = s.random(diameter / 2, s.width - diameter / 2);
         y = s.random(diameter / 2, s.height - diameter / 2);
         col = s.randomColor(false);
-        speedX = s.random(5,10);
-        speedY = s.random(5,10);
+        speedX = s.random(-5,10);
+        speedY = s.random(-5,10);
 
 
         /*
@@ -75,8 +75,8 @@ class Ball {
      }
 
      public void start(){
-      speedX = s.random(3,8);
-      speedY = s.random(3,8);
+      speedX = s.random(-3,8);
+      speedY = s.random(-3,8);
      }
      
 
