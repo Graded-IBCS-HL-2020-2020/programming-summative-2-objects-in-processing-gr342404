@@ -1,6 +1,3 @@
-/* YOU SHOULD COMPLETE AND UNDERSTAND THE Ball.java and Bubble.java parts first! */
-/* DON'T FORGET TO RENAME THE FILE TO Snowflake.java WHEN READY TO TEST! */
-
 class Snowflake {
 
   private Sketch s;
@@ -22,30 +19,20 @@ class Snowflake {
   }
 
   public Snowflake(Sketch sketch, float X, float Y, float snowDiam, int snowColor, float sx, float sy) {
-       
-        /* SUMMATIVE REQUIRED Fill out this constructor */
-        s = sketch;
-        x = X;
-        y = Y;
-        diameter = snowDiam;
-        col = snowColor;
-        speedX = sx;
-        speedY = sy;
+
+    s = sketch;
+    x = X;
+    y = Y;
+    diameter = snowDiam;
+    col = snowColor;
+    speedX = sx;
+    speedY = sy;
   }
 
   public float getRadius() {
     return diameter / 2;
   }
 
-  /*
-   * 
-   * SUMMATIVE REQUIRED Implement this entire class. ONLY drawSnowflake() and
-   * moveSnowflake() have been implemented for you! I recommend using your
-   * Bubble.java as a template. Start by creating your instance variables and
-   * constructors.
-   */
-
-  /** Draws the flake. */
   public void drawSnowflake() {
     s.stroke(col);
     s.line(x - getRadius() / 2, y - getRadius() / 2, x + getRadius() / 2, y + getRadius() / 2);
@@ -54,7 +41,6 @@ class Snowflake {
     s.line(x, y - getRadius(), x, y + getRadius());
   }
 
-  /** Moves the flake */
   public void moveSnowflake() {
     if (x > (s.width - getRadius()) || x < getRadius()) {
       speedX = -speedX;
